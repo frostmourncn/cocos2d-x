@@ -172,7 +172,7 @@ namespace PhoneDirect3DXamlAppInterop
                             m_textBox.MaxLength = 1;
                             m_textBox.KeyDown += OnKeyDown;
                             m_textBox.KeyUp += OnKeyUp;
-                            // TODO DrawingSurface2.Children.Add(m_textBox);
+                            LayoutRoot.Children.Add(m_textBox);
                         }
                         m_textBox.Focus();
                         break;
@@ -180,7 +180,7 @@ namespace PhoneDirect3DXamlAppInterop
                     case Cocos2dEvent.HideKeyboard:
                         if (m_textBox != null)
                         {
-                            // TODO DrawingSurface2.Children.Remove(m_textBox);
+                            LayoutRoot.Children.Remove(m_textBox);
                         }
                         m_textBox = null;
                         break;
@@ -195,7 +195,7 @@ namespace PhoneDirect3DXamlAppInterop
             Deployment.Current.Dispatcher.BeginInvoke(() =>
             {
                 EditBox editbox = new EditBox(this, strPlaceHolder, strText, maxLength, inputMode, inputFlag);
-                // TODO DrawingSurface2.Children.Add(editbox);
+                LayoutRoot.Children.Add(editbox);
             });
         }
 

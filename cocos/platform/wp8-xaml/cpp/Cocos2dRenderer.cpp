@@ -111,7 +111,7 @@ IAsyncAction^ Cocos2dRenderer::OnSuspending()
 
 void Cocos2dRenderer::Render()
 {
-   const float midnightBlue[] = { 1, 0.5f, 0.5f, 1.0f };
+	const float midnightBlue[] = { 0.0f, 0.0f, 0.0f, 1.0f };
 	m_d3dContext->ClearRenderTargetView(
 		m_renderTargetView.Get(),
 		midnightBlue);

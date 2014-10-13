@@ -42,7 +42,9 @@ THE SOFTWARE.
 #include <agile.h>
 #include <DirectXMath.h>
 
+#if DIRECTX_ENABLED == 0
 #include <EGL/egl.h>
+#endif
 #include "platform/wp8-xaml/cpp/IWP8Win.h"
 #include "platform/winrt/DirectXHelper.h"
 

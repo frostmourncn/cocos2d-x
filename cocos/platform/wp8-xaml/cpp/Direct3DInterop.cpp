@@ -78,7 +78,8 @@ IAsyncAction^ Direct3DInterop::OnSuspending()
 
 void Direct3DInterop::OnBackKeyPress()
 {
-	cocos2d::Director::getInstance()->getEventDispatcher()->dispatchEvent(new cocos2d::EventKeyboard(cocos2d::EventKeyboard::KeyCode::KEY_BACK, true));
+	//cocos2d::Director::getInstance()->getEventDispatcher()->dispatchEvent(new cocos2d::EventKeyboard(cocos2d::EventKeyboard::KeyCode::KEY_BACK, true));
+	cocos2d::GLView::sharedOpenGLView()->QueueBackKeyPress();
 }
 
 // Pointer Event Handlers. We need to queue up pointer events to pass them to the drawing thread
